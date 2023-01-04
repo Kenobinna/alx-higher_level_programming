@@ -1,29 +1,31 @@
 #!/usr/bin/python3
-"""Defines a class -> Rectangle.
-Returns its area and perimeter
-"""
+"""A class that defines a rectangle"""
 
 
 class Rectangle:
-    """Rectangle class."""
+    """this represents a rectangle"""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new Rectangle.
+        """Initializing this rectangle class
         Args:
-            width (int): rectangle width
-            height (int): rectangle height
+            width: represents the width of the rectangle
+            height: represents the height of the rectangle
+        Raises:
+            TypeError: if size is not integer
+            ValueError: if size is less than zero
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get/set the width of the rectangle."""
+        """retrieves width attribute"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        if type(value) is not int:
+        """sets width attribute"""
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -31,11 +33,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get/set the height of the rectangle."""
+        """retrieves height attribute"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """sets height attribute"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -43,11 +46,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """returns rectangle area"""
-        return self.__width * self.__height
+        """Returns the area of the rectangle"""
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        """returns rectangle perimeter"""
+        """Returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
