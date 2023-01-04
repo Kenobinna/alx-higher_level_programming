@@ -1,20 +1,3 @@
-
-Adinoyi03
-/
-alx-higher_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-higher_level_programming/0x08-python-more_classes/101-nqueens.py
-@Adinoyi03
-Adinoyi03 make the files executable
- 1 contributor
-Executable File  135 lines (120 sloc)  3.86 KB
 #!/usr/bin/python3
 # 101-nqueens.py
 """Solves the N-queens puzzle.
