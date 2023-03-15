@@ -1,4 +1,4 @@
-onst $ = window.$;
+const $ = window.$;
 window.onload = function () {
   $('INPUT#btn_translate').click(function () {
     const lan = $('INPUT#language_code').val();
